@@ -1,0 +1,9 @@
+{
+  "frontend/src/App.tsx": "Main application component with lamp state management, layout structure including header and footer with proper attribution.",
+  "frontend/src/components/LampScene.tsx": "Composition component that combines the lamp illustration and toggle button, managing their layout and prop passing.",
+  "frontend/src/components/LampIllustration.tsx": "SVG-based colorful table lamp with smooth CSS transitions for on/off states, featuring gradients, decorative elements, and animated glow effects.",
+  "frontend/src/components/LampToggleButton.tsx": "Accessible toggle button component with keyboard support, aria-pressed state, and dynamic styling based on lamp state.",
+  "frontend/src/index.css": "Global styles with warm color palette (amber/orange/coral) using OKLCH color system, custom lamp animation keyframes, and typography settings.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with custom glow-pulse animation keyframe for the lamp's light effect.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file as no backend queries are required for this client-side animation feature."
+}

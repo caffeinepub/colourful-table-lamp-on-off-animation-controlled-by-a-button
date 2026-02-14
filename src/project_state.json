@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Create an animation of a colourful table lamp that switches on/off when a button is pressed.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-page-ui-that-displays-a-colourful-table-lamp-illustration-and-a-control-button-that-toggles-the-lamp-between-on-and-off-states-when-pressed",
+      "title": "Create a single-page UI that displays a colourful table lamp illustration and a control button that toggles the lamp between ON and OFF states when pressed.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-smooth-on-off-animation-for-the-lamp-when-turning-on-the-lamp-should-visibly-light-up-e-g-glow-brighter-shade-light-cone-when-turning-off-the-glow-light-should-fade-out-smoothly",
+      "title": "Implement a smooth on/off animation for the lamp: when turning ON, the lamp should visibly “light up” (e.g., glow, brighter shade, light cone); when turning OFF, the glow/light should fade out smoothly.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-make-the-lamp-colourful-by-incorporating-multiple-vivid-colours-into-the-lamp-design-and-or-light-effect-and-ensure-the-colour-styling-remains-coherent-in-both-on-and-off-states",
+      "title": "Make the lamp “colourful” by incorporating multiple vivid colours into the lamp design and/or light effect, and ensure the colour styling remains coherent in both ON and OFF states.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-user-facing-english-text-labels-for-the-control-e-g-button-label-changes-between-switch-on-and-switch-off-or-shows-current-state-lamp-is-on-off-and-ensure-basic-accessibility-keyboard-activation-and-aria-where-appropriate",
+      "title": "Add user-facing English text labels for the control (e.g., button label changes between “Switch On” and “Switch Off”, or shows current state “Lamp is On/Off”) and ensure basic accessibility (keyboard activation and ARIA where appropriate).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-consistent-visual-theme-for-the-page-layout-typography-and-colours-that-complements-a-colourful-lamp-animation-avoid-blue-purple-as-the-primary-palette-unless-necessary",
+      "title": "Apply a consistent visual theme for the page (layout, typography, and colours) that complements a colourful lamp animation; avoid blue/purple as the primary palette unless necessary.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Animated colourful table lamp that toggles on/off via button press",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Colourful table lamp on/off animation controlled by a button",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

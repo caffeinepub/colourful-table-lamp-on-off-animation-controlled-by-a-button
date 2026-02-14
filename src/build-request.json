@@ -1,0 +1,108 @@
+{
+  "kind": "build_request",
+  "title": "Colourful table lamp on/off animation controlled by a button",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a single-page UI that displays a colourful table lamp illustration and a control button that toggles the lamp between ON and OFF states when pressed.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Animation of colourful Table Lamp switch on and off by pressing button"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A table lamp is visible on the page without requiring any backend calls.",
+        "A single button is visible and clickable/tappable on desktop and mobile.",
+        "Pressing the button toggles the lamp state between ON and OFF reliably."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement a smooth on/off animation for the lamp: when turning ON, the lamp should visibly “light up” (e.g., glow, brighter shade, light cone); when turning OFF, the glow/light should fade out smoothly.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Animation of colourful Table Lamp switch on and off by pressing button"
+        ]
+      },
+      "acceptanceCriteria": [
+        "ON transition includes a visible brightening/glow effect and completes smoothly (no abrupt jump).",
+        "OFF transition fades the light/glow out smoothly (no abrupt jump).",
+        "Animation works with repeated rapid toggles (no broken intermediate state)."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Make the lamp “colourful” by incorporating multiple vivid colours into the lamp design and/or light effect, and ensure the colour styling remains coherent in both ON and OFF states.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Animation of colourful Table Lamp switch on and off by pressing button"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Lamp design uses multiple distinct colours (not monochrome).",
+        "ON state is clearly more vibrant/bright than OFF state while still matching the same colour palette.",
+        "Colours render correctly in modern browsers (Chrome, Firefox, Safari)."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add user-facing English text labels for the control (e.g., button label changes between “Switch On” and “Switch Off”, or shows current state “Lamp is On/Off”) and ensure basic accessibility (keyboard activation and ARIA where appropriate).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Animation of colourful Table Lamp switch on and off by pressing button"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All user-facing text is in English.",
+        "The button can be toggled using keyboard (Enter/Space).",
+        "The button exposes an accessible name and indicates state (e.g., via aria-pressed or equivalent)."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Apply a consistent visual theme for the page (layout, typography, and colours) that complements a colourful lamp animation; avoid blue/purple as the primary palette unless necessary.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "UI has a coherent theme (background, typography, spacing) consistent across the page.",
+        "Primary look is not dominated by blue/purple tones."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend must be implemented with React + TypeScript, Tailwind CSS, and available template patterns.",
+    "Do not edit files under frontend/src/components/ui or other immutable paths; compose them instead if needed.",
+    "Backend changes are not required for this feature; keep the app functional without any backend dependency for the animation."
+  ],
+  "nonGoals": [
+    "User accounts or authentication (Internet Identity).",
+    "Persisting lamp state across page reloads.",
+    "Multiplayer, real-time synchronization, or chat features.",
+    "3D rendering (Three.js) unless required to meet the requested animation (prefer lightweight 2D/SVG/CSS)."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

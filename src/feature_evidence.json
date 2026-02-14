@@ -1,0 +1,101 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-single-page-ui-that-displays-a-colourful-table-lamp-illustration-and-a-control-button-that-toggles-the-lamp-between-on-and-off-states-when-pressed",
+      "featureTitle": "Create a single-page UI that displays a colourful table lamp illustration and a control button that toggles the lamp between ON and OFF states when pressed.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/LampScene.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-smooth-on-off-animation-for-the-lamp-when-turning-on-the-lamp-should-visibly-light-up-e-g-glow-brighter-shade-light-cone-when-turning-off-the-glow-light-should-fade-out-smoothly",
+      "featureTitle": "Implement a smooth on/off animation for the lamp: when turning ON, the lamp should visibly “light up” (e.g., glow, brighter shade, light cone); when turning OFF, the glow/light should fade out smoothly.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/LampIllustration.tsx",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-make-the-lamp-colourful-by-incorporating-multiple-vivid-colours-into-the-lamp-design-and-or-light-effect-and-ensure-the-colour-styling-remains-coherent-in-both-on-and-off-states",
+      "featureTitle": "Make the lamp “colourful” by incorporating multiple vivid colours into the lamp design and/or light effect, and ensure the colour styling remains coherent in both ON and OFF states.",
+      "files": [
+        "frontend/src/components/LampIllustration.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-user-facing-english-text-labels-for-the-control-e-g-button-label-changes-between-switch-on-and-switch-off-or-shows-current-state-lamp-is-on-off-and-ensure-basic-accessibility-keyboard-activation-and-aria-where-appropriate",
+      "featureTitle": "Add user-facing English text labels for the control (e.g., button label changes between “Switch On” and “Switch Off”, or shows current state “Lamp is On/Off”) and ensure basic accessibility (keyboard activation and ARIA where appropriate).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/LampToggleButton.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-consistent-visual-theme-for-the-page-layout-typography-and-colours-that-complements-a-colourful-lamp-animation-avoid-blue-purple-as-the-primary-palette-unless-necessary",
+      "featureTitle": "Apply a consistent visual theme for the page (layout, typography, and colours) that complements a colourful lamp animation; avoid blue/purple as the primary palette unless necessary.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

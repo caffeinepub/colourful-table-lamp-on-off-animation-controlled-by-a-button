@@ -1,0 +1,116 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Colourful table lamp toggle with smooth on/off animation (React + TS + Tailwind)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Build a single-page UI that shows a colourful table lamp illustration and one button that toggles ON/OFF entirely client-side.",
+      "acceptanceCriteria": [
+        "A table lamp is visible on the page without requiring any backend calls.",
+        "A single button is visible and clickable/tappable on desktop and mobile.",
+        "Pressing the button toggles the lamp state between ON and OFF reliably."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the single-page React UI with local state (lamp ON/OFF), render the lamp illustration and a single toggle control; keep all behavior client-only (no backend calls)."
+        },
+        {
+          "path": "frontend/src/components/LampScene.tsx",
+          "operation": "create",
+          "description": "Add a composed scene component that includes the lamp illustration and the control area, accepting controlled props (isOn, onToggle) to keep logic simple and reliable."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement a smooth lamp on/off animation with visible glow/brightening when ON and smooth fade-out when OFF, resilient under rapid toggles.",
+      "acceptanceCriteria": [
+        "ON transition includes a visible brightening/glow effect and completes smoothly (no abrupt jump).",
+        "OFF transition fades the light/glow out smoothly (no abrupt jump).",
+        "Animation works with repeated rapid toggles (no broken intermediate state)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/LampIllustration.tsx",
+          "operation": "create",
+          "description": "Implement a 2D SVG lamp illustration with layered shapes (shade/bulb/light cone) whose glow/brightness is driven by an isOn prop via CSS classes (opacity/blur/brightness transitions) to ensure smooth, interruptible toggles."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind with small, reusable animation utilities (e.g., subtle glow pulse while ON) and/or keyframes used by the lamp illustration; keep transitions state-driven to avoid broken intermediate states under rapid toggles."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the ON/OFF state to LampIllustration and ensure transitions are class-based (no timers), so repeated rapid toggles remain stable."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Ensure the lamp looks colourful using multiple vivid colours and keep the palette coherent across ON and OFF states.",
+      "acceptanceCriteria": [
+        "Lamp design uses multiple distinct colours (not monochrome).",
+        "ON state is clearly more vibrant/bright than OFF state while still matching the same colour palette.",
+        "Colours render correctly in modern browsers (Chrome, Firefox, Safari)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/LampIllustration.tsx",
+          "operation": "modify",
+          "description": "Add multiple vivid colours via SVG gradients and accent layers (e.g., shade stripes/base accents/light cone tint), and tune OFF vs ON styling with the same palette (OFF muted/low opacity, ON brighter/saturated) for coherent rendering across browsers."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Define global CSS variables and base styles that support a warm, colourful palette (non-blue/purple-dominant) and ensure consistent rendering for gradients/shadows used by the lamp illustration."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add English UI text labels and basic accessibility (keyboard activation, accessible name, and state indication).",
+      "acceptanceCriteria": [
+        "All user-facing text is in English.",
+        "The button can be toggled using keyboard (Enter/Space).",
+        "The button exposes an accessible name and indicates state (e.g., via aria-pressed or equivalent)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/LampToggleButton.tsx",
+          "operation": "create",
+          "description": "Create an accessible toggle button component using a native <button> with English labels (e.g., “Switch On”/“Switch Off”), aria-pressed reflecting state, and standard keyboard activation support (Enter/Space) via native button semantics."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Use LampToggleButton in the page, bind aria/state text to the lamp state, and optionally include a short English status line (e.g., “Lamp is On/Off”) for clarity."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Apply a consistent, cohesive visual theme (layout/typography/colours) that complements the colourful lamp and avoids blue/purple as the primary palette.",
+      "acceptanceCriteria": [
+        "UI has a coherent theme (background, typography, spacing) consistent across the page.",
+        "Primary look is not dominated by blue/purple tones."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Apply a simple centered layout with consistent spacing and typography using Tailwind utilities; ensure the primary visual feel is warm/neutral (e.g., cream/amber/coral accents) rather than blue/purple."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Set global theme tokens (background/foreground/primary/accent) and base typography defaults to reinforce a cohesive warm theme that complements the colourful lamp animation."
+        }
+      ]
+    }
+  ]
+}

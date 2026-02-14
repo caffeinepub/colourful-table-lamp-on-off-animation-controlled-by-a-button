@@ -1,0 +1,45 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-14T11:43:34.697Z",
+  "summary": "Frontend implements a single-page React UI with an SVG colorful lamp, a toggle button, English labels, and smooth on/off glow/light-cone transitions. However, the diff also introduces backend/auth-related code (Motoko actor + Internet Identity + actor/query hooks) which was explicitly a non-goal and not required for the lamp animation feature.",
+  "missing_requirements": [],
+  "hallucinated_features": [
+    {
+      "description": "Added backend canister (Motoko) stub even though backend changes were not required for this feature.",
+      "reason": "BuildRequest explicitly says backend changes are not required; the diff adds a backend file.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Introduced Internet Identity/authentication and actor/query infrastructure (InternetIdentityProvider, useInternetIdentity, useActor, react-query integration) despite authentication being a stated non-goal and unnecessary for a client-only animation.",
+      "reason": "Non-goals include user accounts/authentication and no backend dependency for the animation; diff adds multiple auth/actor-related hooks and wraps the app with an Internet Identity provider and QueryClientProvider.",
+      "evidence": [
+        "frontend/src/main.tsx",
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/hooks/useQueries.ts"
+      ]
+    }
+  ],
+  "confidence": 0.78,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/LampIllustration.tsx",
+    "frontend/src/components/LampScene.tsx",
+    "frontend/src/components/LampToggleButton.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

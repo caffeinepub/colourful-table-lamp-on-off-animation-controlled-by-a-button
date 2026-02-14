@@ -1,0 +1,18 @@
+{
+  "backend/main.mo": "Empty Motoko actor definition.",
+  "feature_evidence.json": "Metadata listing implemented features, related files, components, and test IDs.",
+  "frontend-file-summaries.txt": "Text mapping frontend file paths to short descriptions of their roles.",
+  "frontend/index.css": "Tailwind base setup with extensive CSS variables for light/dark themes and global styling.",
+  "frontend/index.html": "Basic HTML entry point loading the React app root and main.tsx.",
+  "frontend/src/App.tsx": "Main React component managing lamp state and layout with themed header and footer.",
+  "frontend/src/components/LampIllustration.tsx": "SVG lamp illustration with gradients and animated glow/light effects responsive to on/off state.",
+  "frontend/src/components/LampScene.tsx": "Layout component combining the lamp illustration and toggle button with state display.",
+  "frontend/src/components/LampToggleButton.tsx": "Accessible toggle button with dynamic styling and icons reflecting lamp state.",
+  "frontend/src/hooks/useActor.ts": "Hook that creates and manages a backend actor based on Internet Identity authentication.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Context and hooks for managing Internet Identity authentication state and login flow.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file for potential backend query hooks.",
+  "frontend/src/index.css": "Defines Tailwind layers, OKLCH theme variables for light and dark modes, base styles, and custom lamp glow animations.",
+  "frontend/src/main.tsx": "Bootstraps the React app with React Query and Internet Identity providers and loads global styles.",
+  "frontend/tailwind.config.js": "Configures Tailwind with custom colors mapped to CSS variables, extended animations, and plugins.",
+  "project_state.json": "Describes the project state, including features for a colourful animated lamp UI and pending requests."
+}
